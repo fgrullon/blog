@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import GradientBorder from "../../../components/GradientBorder";
+import GradientBorder from "../../components/GradientBorder";
 
 export default () => {
   const router = useRouter();

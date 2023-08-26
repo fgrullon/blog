@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Tag from "./Tag";
-import GradientBorder from "../../../components/GradientBorder";
+import GradientBorder from "../../components/GradientBorder";
 import type { Project as ProjectType } from "@/types";
 
 export default ({ projects }: { projects: ProjectType[] }) => {
@@ -82,33 +82,3 @@ export const Project = ({
     </GradientBorder>
   );
 };
-
-export const ProjectSkeleton = () => (
-  <GradientBorder rounded="rounded-[6px]" padding="p-[2px]" hoverable>
-    <div className="flex h-full rounded bg-slate-100 text-start transition-colors dark:bg-kinda-black">
-      <div className="group flex flex-1 flex-col p-3" draggable={false}>
-        <span className="text-lg font-bold">
-          <i className="fa-solid fa-arrow-right me-2 transition-transform group-hover:translate-x-1" />
-          <span className="underline-offset-2 group-hover:underline">
-            Lorem ipsum
-          </span>{" "}
-        </span>
-
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
-
-        <div className="mt-1 flex flex-wrap gap-1">
-          <Tag tag={"Loading"} />
-          <Tag tag={"Tags"} />
-        </div>
-      </div>
-
-      <>
-        <div className="my-3 w-px bg-gray-300" />
-
-        <div className="group flex items-center px-3">
-          <i className="fa-solid fa-up-right-from-square fa-lg mx-1 transition-transform group-hover:scale-[1.18]" />
-        </div>
-      </>
-    </div>
-  </GradientBorder>
-);

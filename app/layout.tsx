@@ -19,9 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} dark:bg-slate-800`}>
-        {" "}
         <Navbar />
-        <MyProfilePic />
         {children}
       </body>
     </html>
